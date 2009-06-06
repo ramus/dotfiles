@@ -1,0 +1,21 @@
+startup_message off
+nethack on
+
+# Longer scrollback
+defscrollback 4096
+
+# Set to UTF-8 encoding
+encoding UTF-8
+defutf8 on
+
+#term screen-256color
+term rxvt-unicode
+# Enable 256 colors
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+terminfo rxvt-unicode ti@:te@
+
+# Yeah
+pow_detach_msg "Be seeing you..."
+
+# C-A and emacs doesn't play well together
+escape ^``
