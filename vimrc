@@ -15,7 +15,7 @@ set vb t_vb=
 set showmatch
 set matchtime=2
 
-" Indentation
+" Indentation {{{
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -23,3 +23,9 @@ set expandtab
 set shiftround
 set autoindent
 set smartindent
+" }}}
+
+" Folding {{{
+set foldmethod=marker
+set foldclose=all
+" }}}
