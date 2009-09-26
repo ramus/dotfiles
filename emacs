@@ -40,8 +40,9 @@
 (setq browse-url-browser-function 'w3m-browse-url)
 (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
 
-;; no dumb backup files
+;; dumb stuff
 (setq make-backup-files nil)
+(setq ring-bell-function 'ignore)
 
 ;; Local copy of the hyperspec
 (setq common-lisp-hyperspec-root
