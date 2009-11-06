@@ -1,0 +1,15 @@
+Config { font = "xft:Terminus:pixelsize=12"
+       , bgColor = "black"
+       , fgColor = "#659fdb"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Network "wlan0" ["-t","<fc=#cc9393><rx></fc> <fc=#7f9f7f><tx></fc>"] 50
+                    , Run Battery ["-L","20","-l","red","-t","B <left>"] 50
+                    , Run Date "%H:%M:%S %a %b %_d" "date" 10
+                    , Run Thermal "THM" ["-H","80","-h","red","-t","<temp>C"] 50
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %THM% | %battery% | %wlan0% | %date%"
+}
